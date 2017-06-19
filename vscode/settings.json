@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Monaco",
+    "workbench.activityBar.visible": false,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "typescript.check.tscVersion": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false
+  }
