@@ -7,5 +7,6 @@
     "files.trimTrailingWhitespace": true,
     "typescript.check.tscVersion": false,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "default"
   }
