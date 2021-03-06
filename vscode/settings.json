@@ -1,12 +1,32 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 15,
-    "editor.fontFamily": "Monaco",
-    "workbench.activityBar.visible": false,
-    "editor.tabSize": 2,
-    "files.trimTrailingWhitespace": true,
-    "typescript.check.tscVersion": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.minimap.enabled": false,
-    "window.menuBarVisibility": "default"
-  }
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 12,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+  "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+  "workbench.activityBar.visible": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "window.zoomLevel": 0,
+  "yaml.schemas": {
+    "file:///toc.schema.json": "/toc\\.yml/i"
+  },
+  "ruby.intellisense": "rubyLocate",
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [
+    120
+  ],
+  "breadcrumbs.enabled": true,
+  "tabnine.experimentalAutoImports": true,
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    }
+  },
+  "ruby.format": "rubocop"
+}
