@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 12,
+  "editor.fontSize": 13,
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Monokai Pro (Filter Machine)",
   "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
@@ -28,5 +28,11 @@
       "useBundler": true
     }
   },
-  "ruby.format": "rubocop"
+  "ruby.format": "rubocop",
+  "git.mergeEditor": false,
+  "editor.bracketPairColorization.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "go.toolsManagement.autoUpdate": true,
+  "rubyLsp.rubyVersionManager": "rvm",
+  "workbench.editor.enablePreview": false
 }
