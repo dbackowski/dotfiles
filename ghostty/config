@@ -1,0 +1,49 @@
+# Font
+font-family = MesloLGLNFM
+font-size = 14
+font-style = regular
+font-style-bold = bold
+font-style-italic = italic
+font-thicken = true
+
+# Colors
+background = #000000
+foreground = #bbbbbb
+cursor-color = #ffa560
+cursor-text = #ffffff
+selection-background = #363983
+selection-foreground = #f2f2f2
+
+# ANSI Normal
+palette = 0=#4f4f4f
+palette = 1=#ff6c60
+palette = 2=#a8ff60
+palette = 3=#ffffb6
+palette = 4=#96cbfe
+palette = 5=#ff73fd
+palette = 6=#c6c5fe
+palette = 7=#eeeeee
+
+# ANSI Bright
+palette = 8=#7c7c7c
+palette = 9=#ffb6b0
+palette = 10=#ceffac
+palette = 11=#ffffcc
+palette = 12=#b5dcff
+palette = 13=#ff9cfe
+palette = 14=#dfe0fe
+palette = 15=#ffffff
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Window
+window-padding-x = 0
+window-padding-y = 0
+macos-titlebar-style = hidden
+
+# Terminal
+scrollback-limit = 0
+mouse-hide-while-typing = true
+
