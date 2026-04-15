@@ -41,7 +41,8 @@ cursor-style-blink = false
 # Window
 window-padding-x = 0
 window-padding-y = 0
-macos-titlebar-style = hidden
+macos-titlebar-style = native
+window-theme = system
 
 # Terminal
 scrollback-limit = 0
