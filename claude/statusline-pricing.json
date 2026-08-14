@@ -1,0 +1,15 @@
+{
+  "_comment": "USD per 1M tokens. Defaults are Anthropic FIRST-PARTY list rates. Amazon Bedrock is partner-operated and priced separately - edit these to your actual Bedrock/negotiated rates for accurate figures. See https://aws.amazon.com/bedrock/pricing/",
+  "_cache_write_note": "cache_write_5m is typically 1.25x input; cache_write_1h is typically 2.0x input; cache_read is typically 0.1x input.",
+
+  "models": {
+    "claude-opus-5":      { "input": 5.00, "output": 25.00, "cache_write_5m": 6.25,  "cache_write_1h": 10.00, "cache_read": 0.50 },
+    "claude-opus-4-8":    { "input": 5.00, "output": 25.00, "cache_write_5m": 6.25,  "cache_write_1h": 10.00, "cache_read": 0.50 },
+    "claude-opus-4-7":    { "input": 5.00, "output": 25.00, "cache_write_5m": 6.25,  "cache_write_1h": 10.00, "cache_read": 0.50 },
+    "claude-sonnet-5":    { "input": 3.00, "output": 15.00, "cache_write_5m": 3.75,  "cache_write_1h": 6.00,  "cache_read": 0.30 },
+    "claude-sonnet-4-6":  { "input": 3.00, "output": 15.00, "cache_write_5m": 3.75,  "cache_write_1h": 6.00,  "cache_read": 0.30 },
+    "claude-haiku-4-5":   { "input": 1.00, "output": 5.00,  "cache_write_5m": 1.25,  "cache_write_1h": 2.00,  "cache_read": 0.10 }
+  },
+
+  "default": { "input": 5.00, "output": 25.00, "cache_write_5m": 6.25, "cache_write_1h": 10.00, "cache_read": 0.50 }
+}
