@@ -298,6 +298,11 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 
+# Colour the whole divider with pane-active-border-style, not just its first half.
+# tmux's default "colour" indicator hands the second half of the active pane's
+# border back to pane-border-style, which reads as a half-painted line.
+set -g pane-border-indicators off
+
 # -- Claude Code session state in the window tabs ------------------------------
 # Tabs read "claude*" while Claude is working, "claude!" while it is blocked on a
 # permission prompt, "claude✓" once its turn is finished. State is written per
