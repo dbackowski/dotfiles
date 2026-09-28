@@ -17,6 +17,12 @@ printf '%s' "$input" | jq -r --arg home "$HOME" '
 
   def paint(c): "[" + c + "m" + . + "[0m";
 
+  # Percentage -> 10-cell bar. Empty cells use the same glyph in grey so both
+  # halves have equal height, then colour $c is restored for the rest of the segment.
+  def bar($c):
+    ([[., 0] | max, 100] | min / 10 | floor) as $f
+    | ("█" * $f) + "\u001b[38;5;240m" + ("█" * (10 - $f)) + "\u001b[" + $c + "m";
+
   # Green below 70% used, amber to 90%, red above.
   def pcol: if . >= 90 then "31" elif . >= 70 then "33" else "32" end;
 
@@ -33,7 +39,7 @@ printf '%s' "$input" | jq -r --arg home "$HOME" '
     if . == null then empty
     else ((.used_percentage // 0) | floor) as $p
       | ((.resets_at // null) | if . == null then "" else " " + (tonumber | left) end) as $r
-      | ($label + " " + ($p | tostring) + "%" + $r) | paint($p | pcol)
+      | ($label + " " + ($p | bar($p | pcol)) + " " + ($p | tostring) + "%" + $r) | paint($p | pcol)
     end;
 
   (.context_window // {}) as $cw
@@ -46,7 +52,7 @@ printf '%s' "$input" | jq -r --arg home "$HOME" '
       (.model.display_name // "?" | paint("36")),
 
       ("ctx " + ($cw.total_input_tokens | fmt) + "/" + ($cw.context_window_size | fmt)
-        + " " + ($pct | tostring) + "%" | paint($pct | pcol))
+        + " " + ($pct | bar($pct | pcol)) + " " + ($pct | tostring) + "%" | paint($pct | pcol))
     ]
     + [$rl.five_hour   | window("5h")]
     + [$rl.seven_day   | window("7d")]
