@@ -21,7 +21,7 @@ printf '%s' "$input" | jq -r --arg home "$HOME" '
   # halves have equal height, then colour $c is restored for the rest of the segment.
   def bar($c):
     ([[., 0] | max, 100] | min / 10 | floor) as $f
-    | ("█" * $f) + "\u001b[38;5;240m" + ("█" * (10 - $f)) + "\u001b[" + $c + "m";
+    | ("■" * $f) + "\u001b[38;5;240m" + ("■" * (10 - $f)) + "\u001b[" + $c + "m";
 
   # Green below 70% used, amber to 90%, red above.
   def pcol: if . >= 90 then "31" elif . >= 70 then "33" else "32" end;
